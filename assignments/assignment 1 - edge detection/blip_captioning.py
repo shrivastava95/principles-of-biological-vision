@@ -13,7 +13,7 @@ def caption_blip(model, vis_processors, image):
 
 caption_list = []
 
-source_folder = 'natural images2'
+source_folder = 'natural images'
 image_paths = [os.path.join(source_folder, image_path) for image_path in os.listdir(source_folder)]
 image_paths.sort()
 for image_path in os.listdir(source_folder):
@@ -22,5 +22,5 @@ for image_path in os.listdir(source_folder):
     caption = caption_blip(model, vis_processors, image)
     caption_list.append(caption[0])
 
-with open('caption_list2.txt', 'w') as f:
+with open('caption_list.txt', 'w') as f:
     f.write('\n'.join(caption_list))
