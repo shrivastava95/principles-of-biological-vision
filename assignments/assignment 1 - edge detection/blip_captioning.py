@@ -21,4 +21,4 @@ for image_path in os.listdir(source_folder):
     caption_list.append(caption[0])
 
 with open('caption_list2.txt', 'w') as f:
-    f.writelines([caption + '\n' for caption in caption_list])
+    f.write('\n'.join(caption_list))
