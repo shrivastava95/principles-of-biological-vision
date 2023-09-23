@@ -14,6 +14,8 @@ def caption_blip(model, vis_processors, image):
 caption_list = []
 
 source_folder = 'natural images2'
+image_paths = [os.path.join(source_folder, image_path) for image_path in os.listdir(source_folder)]
+image_paths.sort()
 for image_path in os.listdir(source_folder):
     image_path = os.path.join(source_folder, image_path)
     image = Image.open(image_path)
